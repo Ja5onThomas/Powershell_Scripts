@@ -1,0 +1,7 @@
+# Uninstall Cisco AnyConnect Mobility Client
+$product = gwmi win32_product -filter "Name LIKE '%Cisco AnyConnect Secure Mobility Client%'"
+msiexec /X $product.IdentifyingNumber /qn /norestart
+
+# Uninstall Cisco AnyConnect ISE Posture Module
+$product = gwmi win32_product -filter "Name LIKE '%Cisco AnyConnect ISE Posture Module%'"
+msiexec /X $product.IdentifyingNumber /qn /norestart
